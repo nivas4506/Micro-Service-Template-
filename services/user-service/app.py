@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from typing import List
 
 app = FastAPI(title="User Service")
 
@@ -18,7 +17,7 @@ def health():
     return {"service": "user-service", "status": "healthy"}
 
 
-@app.get("/users", response_model=List[User])
+@app.get("/users", response_model=list[User])
 def get_users():
     return users
 

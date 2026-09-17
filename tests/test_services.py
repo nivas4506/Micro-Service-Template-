@@ -1,6 +1,5 @@
-from fastapi.testclient import TestClient
-
 from conftest import load_app
+from fastapi.testclient import TestClient
 
 
 def test_user_service_health():

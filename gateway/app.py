@@ -1,5 +1,5 @@
-from fastapi import FastAPI
 import httpx
+from fastapi import FastAPI
 
 app = FastAPI(title="MicroDeploy API Gateway")
 
@@ -29,7 +29,7 @@ async def services():
             try:
                 response = await client.get(f"{url}/health")
                 result[name] = response.json()
-            except Exception:
+            except Exception:  # noqa: BLE001
                 result[name] = {"status": "unavailable"}
 
     return result
