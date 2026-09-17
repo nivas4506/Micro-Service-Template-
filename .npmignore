@@ -1,11 +1,9 @@
 __pycache__/
 *.py[cod]
 .pytest_cache/
+.ruff_cache/
 .venv/
 venv/
-.env
-*.egg-info/
-dist/
-build/
-*.tgz
 node_modules/
+*.tgz
+.env

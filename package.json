@@ -1,0 +1,35 @@
+{
+  "name": "microdeploy-pipeline",
+  "version": "1.0.0",
+  "description": "MicroDeploy FastAPI Microservices & CI/CD Pipeline",
+  "main": "gateway/app.py",
+  "scripts": {
+    "test": "pytest tests/ -v",
+    "lint": "ruff check services/ gateway/ tests/",
+    "lint:fix": "ruff check --fix services/ gateway/ tests/",
+    "build": "docker compose build",
+    "up": "docker compose up --build -d",
+    "down": "docker compose down",
+    "logs": "docker compose logs -f",
+    "pack": "npm pack"
+  },
+  "keywords": [
+    "microservices",
+    "fastapi",
+    "docker",
+    "pipeline",
+    "ci-cd"
+  ],
+  "author": "b.v.s.nivas <bvsnivaschowdary@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "gateway",
+    "services",
+    "frontend",
+    "infrastructure",
+    "docker-compose.yml",
+    "requirements.txt",
+    "README.md",
+    "Makefile"
+  ]
+}
