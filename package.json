@@ -1,8 +1,15 @@
 {
-  "name": "microdeploy-pipeline",
+  "name": "@nivas4506/microdeploy-pipeline",
   "version": "1.0.0",
   "description": "MicroDeploy FastAPI Microservices & CI/CD Pipeline",
   "main": "gateway/app.py",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nivas4506/Pipeline-1.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "test": "pytest tests/ -v",
     "lint": "ruff check services/ gateway/ tests/",
