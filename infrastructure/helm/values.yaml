@@ -1,0 +1,31 @@
+namespace: microdeploy
+
+gateway:
+  replicaCount: 2
+  image: microdeploy/gateway:latest
+  port: 8000
+
+userService:
+  replicaCount: 2
+  image: microdeploy/user-service:latest
+  port: 8001
+
+productService:
+  replicaCount: 2
+  image: microdeploy/product-service:latest
+  port: 8002
+
+orderService:
+  replicaCount: 2
+  image: microdeploy/order-service:latest
+  port: 8003
+
+paymentService:
+  replicaCount: 1
+  image: microdeploy/payment-service:latest
+  port: 8004
+
+notificationService:
+  replicaCount: 1
+  image: microdeploy/notification-service:latest
+  port: 8005

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MicroDeploy</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { color: #2563eb; }
+    pre { background: #f1f5f9; padding: 1rem; border-radius: 8px; overflow-x: auto; }
+    button { background: #2563eb; color: white; border: none; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <h1>MicroDeploy</h1>
+  <p>Microservices demo — API Gateway at <code>/api</code></p>
+  <button onclick="checkHealth()">Check Gateway Health</button>
+  <pre id="output">Click the button to query the gateway.</pre>
+  <script>
+    async function checkHealth() {
+      const output = document.getElementById('output');
+      output.textContent = 'Loading...';
+      try {
+        const res = await fetch('/api/health');
+        const data = await res.json();
+        output.textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        output.textContent = 'Error: ' + err.message;
+      }
+    }
+  </script>
+</body>
+</html>
