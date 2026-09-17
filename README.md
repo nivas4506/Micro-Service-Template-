@@ -4,7 +4,7 @@ A modern microservices platform built with FastAPI, Docker Compose, Kubernetes, 
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [Architecture Overview](#-architecture-overview)
 - [Service Catalog](#-service-catalog)
@@ -23,7 +23,7 @@ A modern microservices platform built with FastAPI, Docker Compose, Kubernetes, 
 
 ---
 
-## 🏛️ Architecture Overview
+## Architecture Overview
 
 The system follows a microservices pattern with client traffic routed through a lightweight frontend and aggregated via a centralized API Gateway:
 
@@ -44,7 +44,7 @@ The system follows a microservices pattern with client traffic routed through a 
 
 ---
 
-## 📦 Service Catalog
+## Service Catalog
 
 | Service | Port | Tech Stack | Responsibility |
 |---------|------|------------|----------------|
@@ -58,7 +58,7 @@ The system follows a microservices pattern with client traffic routed through a 
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 Pipeline/
@@ -98,7 +98,7 @@ Pipeline/
 
 ---
 
-## 🚀 CI/CD Pipeline
+## CI/CD Pipeline
 
 The project includes an automated GitHub Actions workflow defined in [`.github/workflows/ci.yml`](.github/workflows/ci.yml) triggered on pushes and pull requests to `main` / `master`.
 
@@ -129,7 +129,7 @@ The pipeline consists of three sequential/dependent stages:
 
 ---
 
-## ⚡ Quickstart (Local Development)
+## Quickstart (Local Development)
 
 ### Prerequisites
 
@@ -180,7 +180,7 @@ pip install pytest httpx ruff
 
 ---
 
-## 🔍 Endpoints & Verification
+## Endpoints & Verification
 
 Once services are running, verify them using `curl` or your browser:
 
@@ -206,7 +206,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## ☸️ Infrastructure & Deployment
+## Infrastructure & Deployment
 
 ### Kubernetes
 
@@ -224,7 +224,7 @@ Prometheus and Grafana setups are available in `infrastructure/monitoring/` and 
 
 ---
 
-## 🧪 Testing & Quality
+## Testing & Quality
 
 Run the test suite and code linter locally:
 
@@ -240,7 +240,7 @@ make lint
 
 ---
 
-## 🛠️ Makefile Commands
+## Makefile Commands
 
 | Command | Action |
 |---------|--------|
@@ -255,6 +255,6 @@ make lint
 
 ---
 
-## 📄 License
+## License
 
 This repository is maintained for microservice deployment and CI/CD demonstration purposes.
